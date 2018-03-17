@@ -2,7 +2,7 @@
 
 Instalação do Painel SSH 7.2
 
-Seguir o script
+* Seguir o script  
 
 
 apt-get update && apt-get upgrade -y
