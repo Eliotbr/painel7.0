@@ -1,0 +1,41 @@
+#!/bin/bash
+apt-get update && apt-get upgrade
+apt-get install unzip
+apt-get install curl
+clear
+apt-get install apache2
+apt-get install php5 libapache2-mod-php5 php5-mcrypt
+clear
+service apache2 restart
+apt-get install mysql-server php5-mysql
+mysql_install_db
+mysql_secure_installation
+apt-get install phpmyadmin
+php5enmod mcrypt
+clear
+service apache2 restart
+ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+apt-get install libssh2-1-dev libssh2-php
+php -m |grep ssh2
+clear
+service apache2 restart
+wget -O painel.cbox.zip https://www.dropbox.com/s/pv5b9hlcwowaqwd/painel.cbox.zip?dl=0 && mv painel.cbox.zip /var/www/html
+clear
+
+cd /var/www/html
+unzip painel.cbox.zip
+rm painel.cbox.zip index.html
+clear
+
+mysql -h localhost -u root -pJr210290 -e "CREATE DATABASE cbox"
+dpkg-reconfigure tzdata
+
+crontab -e
+
+apt-get install mariadb-server -y
+
+service apache2 restart
+
+cat /dev/null > ~/.bash_history && history -c && clear
+
+reboot
