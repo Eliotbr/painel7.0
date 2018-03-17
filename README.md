@@ -4,9 +4,10 @@ Instalação do Painel SSH 7.2
 
 Seguir o script
 
+
 apt-get update && apt-get upgrade -y
 
- apt-get install curl -y
+apt-get install curl -y
 
  apt-get install apache2 -y
 
@@ -39,6 +40,8 @@ apt-get update && apt-get upgrade -y
  service apache2 restart
 
  wget http://cpanelhost.com.br/install/painel.cbox.zip -O /var/www/html/painel.cbox.zip
+ 
+ wget -O painel.cbox.zip https://www.dropbox.com/s/pv5b9hlcwowaqwd/painel.cbox.zip?dl=0 && mv painel.cbox.zip /var/www/html
 
  cd /var/www/html
 
