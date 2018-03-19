@@ -27,7 +27,7 @@ unzip painel.cbox.zip
 rm painel.cbox.zip index.html
 clear
 
-mysql -h localhost -u root -pJr210290 -e "CREATE DATABASE cbox"
+mysql -h localhost -u root -proot -e "CREATE DATABASE cbox"
 dpkg-reconfigure tzdata
 
 crontab -e
