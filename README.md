@@ -2,4 +2,4 @@
 
 Instalação do Painel SSH 7.0
 
-wget https://raw.githubusercontent.com/juniorfdtech/painel7.2/master/install && bash install
+wget https://raw.githubusercontent.com/juniorfdtech/painel7.0/master/install && bash install
